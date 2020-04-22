@@ -1,19 +1,19 @@
-package Core.Servicios.Maestras.Estudiante;
-import Core.Dominio.Entidades.Maestras.Estudiante;
-import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteRepositorio;
-import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteServicio;
+package Core.Servicios.Maestras.Acudiente;
+
+import Core.Dominio.Entidades.Maestras.Acudiente;
+import Core.Dominio.Interfaces.Maestras.Acudiente.IAcudienteRepositorio;
+import Core.Dominio.Interfaces.Maestras.Acudiente.IAcudienteServicio;
 import java.util.ArrayList;
 
-public class EstudianteServicio implements IEstudianteServicio{
-    // Inyectamos las dependencias.
-    private IEstudianteRepositorio estudianteRepositorio;
+public class AcudienteServicio implements IAcudienteServicio {
+    private IAcudienteRepositorio acudienteRepositorio;
     
-    public EstudianteServicio(IEstudianteRepositorio estudianteRepositorio){
-        this.estudianteRepositorio = estudianteRepositorio;
+    public AcudienteServicio(IAcudienteRepositorio acudienteRepositorio){
+        this.acudienteRepositorio =  acudienteRepositorio;
     }
 
     @Override
-    public void Insertar(Estudiante entidad) {
+    public void Insertar(Acudiente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -23,17 +23,18 @@ public class EstudianteServicio implements IEstudianteServicio{
     }
 
     @Override
-    public void Actualizar(Estudiante entidad) {
+    public void Actualizar(Acudiente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Estudiante> Obtener() {
+    public ArrayList<Acudiente> Obtener() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Estudiante ObtenerPorId(int Id) {
+    public Acudiente ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }

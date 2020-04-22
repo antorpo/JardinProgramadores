@@ -1,19 +1,19 @@
-package Core.Servicios.Maestras.Estudiante;
-import Core.Dominio.Entidades.Maestras.Estudiante;
-import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteRepositorio;
-import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteServicio;
+package Core.Servicios.Maestras.Grupo;
+
+import Core.Dominio.Entidades.Maestras.Grupo;
+import Core.Dominio.Interfaces.Maestras.Grupo.IGrupoRepositorio;
+import Core.Dominio.Interfaces.Maestras.Grupo.IGrupoServicio;
 import java.util.ArrayList;
 
-public class EstudianteServicio implements IEstudianteServicio{
-    // Inyectamos las dependencias.
-    private IEstudianteRepositorio estudianteRepositorio;
+public class GrupoServicio implements IGrupoServicio{
+    private IGrupoRepositorio grupoRepositorio;
     
-    public EstudianteServicio(IEstudianteRepositorio estudianteRepositorio){
-        this.estudianteRepositorio = estudianteRepositorio;
+    public GrupoServicio(IGrupoRepositorio grupoRepositorio){
+        this.grupoRepositorio = grupoRepositorio;
     }
 
     @Override
-    public void Insertar(Estudiante entidad) {
+    public void Insertar(Grupo entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -23,17 +23,18 @@ public class EstudianteServicio implements IEstudianteServicio{
     }
 
     @Override
-    public void Actualizar(Estudiante entidad) {
+    public void Actualizar(Grupo entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Estudiante> Obtener() {
+    public ArrayList<Grupo> Obtener() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Estudiante ObtenerPorId(int Id) {
+    public Grupo ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }

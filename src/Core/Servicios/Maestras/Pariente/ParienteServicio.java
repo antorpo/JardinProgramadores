@@ -1,19 +1,20 @@
-package Core.Servicios.Maestras.Estudiante;
-import Core.Dominio.Entidades.Maestras.Estudiante;
-import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteRepositorio;
-import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteServicio;
+package Core.Servicios.Maestras.Pariente;
+
+import Core.Dominio.Entidades.Maestras.Pariente;
+import Core.Dominio.Interfaces.Maestras.Pariente.IParienteRepositorio;
+import Core.Dominio.Interfaces.Maestras.Pariente.IParienteServicio;
 import java.util.ArrayList;
 
-public class EstudianteServicio implements IEstudianteServicio{
-    // Inyectamos las dependencias.
-    private IEstudianteRepositorio estudianteRepositorio;
+
+public class ParienteServicio implements IParienteServicio {
+    private IParienteRepositorio parienteRepositorio;
     
-    public EstudianteServicio(IEstudianteRepositorio estudianteRepositorio){
-        this.estudianteRepositorio = estudianteRepositorio;
+    public ParienteServicio(IParienteRepositorio parienteRepositorio){
+        this.parienteRepositorio = parienteRepositorio;
     }
 
     @Override
-    public void Insertar(Estudiante entidad) {
+    public void Insertar(Pariente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -23,17 +24,18 @@ public class EstudianteServicio implements IEstudianteServicio{
     }
 
     @Override
-    public void Actualizar(Estudiante entidad) {
+    public void Actualizar(Pariente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Estudiante> Obtener() {
+    public ArrayList<Pariente> Obtener() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Estudiante ObtenerPorId(int Id) {
+    public Pariente ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }
