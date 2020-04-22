@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public interface ILogroServicio {
 
-    void Insertar(Logro entidad);
+    boolean Insertar(Logro entidad);
 
-    void Eliminar(int Id);
+    boolean Eliminar(int Id);
 
-    void Actualizar(Logro entidad);
+    boolean Actualizar(Logro entidad);
 
     ArrayList<Logro> Obtener();
 

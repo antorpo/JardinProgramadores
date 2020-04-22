@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public interface IRepositorio<T> {
 
-    void Insertar(T entidad);
+    boolean Insertar(T entidad);
 
-    void Eliminar(int Id);
+    boolean Eliminar(int Id);
 
-    void Actualizar(T entidad);
+    boolean Actualizar(T entidad);
 
     ArrayList<T> Obtener();
 

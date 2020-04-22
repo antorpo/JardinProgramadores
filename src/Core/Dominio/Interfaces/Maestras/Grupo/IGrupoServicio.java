@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public interface IGrupoServicio {
 
-    void Insertar(Grupo entidad);
+    boolean Insertar(Grupo entidad);
 
-    void Eliminar(int Id);
+    boolean Eliminar(int Id);
 
-    void Actualizar(Grupo entidad);
+    boolean Actualizar(Grupo entidad);
 
     ArrayList<Grupo> Obtener();
 

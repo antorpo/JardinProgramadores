@@ -14,17 +14,17 @@ public class ParienteServicio implements IParienteServicio {
     }
 
     @Override
-    public void Insertar(Pariente entidad) {
+    public boolean Insertar(Pariente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Eliminar(int Id) {
+    public boolean Eliminar(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Actualizar(Pariente entidad) {
+    public boolean Actualizar(Pariente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -37,5 +37,6 @@ public class ParienteServicio implements IParienteServicio {
     public Pariente ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
 }

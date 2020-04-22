@@ -13,17 +13,17 @@ public class GrupoServicio implements IGrupoServicio{
     }
 
     @Override
-    public void Insertar(Grupo entidad) {
+    public boolean Insertar(Grupo entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Eliminar(int Id) {
+    public boolean Eliminar(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Actualizar(Grupo entidad) {
+    public boolean Actualizar(Grupo entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,5 +36,7 @@ public class GrupoServicio implements IGrupoServicio{
     public Grupo ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
     
 }

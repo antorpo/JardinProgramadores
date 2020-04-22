@@ -13,17 +13,17 @@ public class ProfesorServicio implements IProfesorServicio{
     }
 
     @Override
-    public void Insertar(Profesor entidad) {
+    public boolean Insertar(Profesor entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Eliminar(int Id) {
+    public boolean Eliminar(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Actualizar(Profesor entidad) {
+    public boolean Actualizar(Profesor entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,5 +36,5 @@ public class ProfesorServicio implements IProfesorServicio{
     public Profesor ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

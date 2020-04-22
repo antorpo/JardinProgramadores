@@ -13,17 +13,17 @@ public class AcudienteServicio implements IAcudienteServicio {
     }
 
     @Override
-    public void Insertar(Acudiente entidad) {
+    public boolean Insertar(Acudiente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Eliminar(int Id) {
+    public boolean Eliminar(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Actualizar(Acudiente entidad) {
+    public boolean Actualizar(Acudiente entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

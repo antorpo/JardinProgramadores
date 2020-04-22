@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public interface IParienteServicio {
     
-    void Insertar(Pariente entidad);
+    boolean Insertar(Pariente entidad);
 
-    void Eliminar(int Id);
+    boolean Eliminar(int Id);
 
-    void Actualizar(Pariente entidad);
+    boolean Actualizar(Pariente entidad);
 
     ArrayList<Pariente> Obtener();
 

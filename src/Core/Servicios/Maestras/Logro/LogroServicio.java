@@ -10,19 +10,19 @@ public class LogroServicio implements ILogroServicio {
     public LogroServicio(ILogroRepositorio logroRepositorio){
         this.logroRepositorio = logroRepositorio;
     }
-    
+
     @Override
-    public void Insertar(Logro entidad) {
+    public boolean Insertar(Logro entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Eliminar(int Id) {
+    public boolean Eliminar(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Actualizar(Logro entidad) {
+    public boolean Actualizar(Logro entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

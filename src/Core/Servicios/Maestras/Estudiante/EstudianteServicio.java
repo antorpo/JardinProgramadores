@@ -13,17 +13,17 @@ public class EstudianteServicio implements IEstudianteServicio{
     }
 
     @Override
-    public void Insertar(Estudiante entidad) {
+    public boolean Insertar(Estudiante entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Eliminar(int Id) {
+    public boolean Eliminar(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Actualizar(Estudiante entidad) {
+    public boolean Actualizar(Estudiante entidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,4 +36,6 @@ public class EstudianteServicio implements IEstudianteServicio{
     public Estudiante ObtenerPorId(int Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
 }

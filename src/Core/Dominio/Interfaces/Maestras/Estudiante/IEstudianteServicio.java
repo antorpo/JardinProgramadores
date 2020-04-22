@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public interface IEstudianteServicio {
 
-    void Insertar(Estudiante entidad);
+    boolean Insertar(Estudiante entidad);
 
-    void Eliminar(int Id);
+    boolean Eliminar(int Id);
 
-    void Actualizar(Estudiante entidad);
+    boolean Actualizar(Estudiante entidad);
 
     ArrayList<Estudiante> Obtener();
 

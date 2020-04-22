@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public interface IAcudienteServicio {
 
-    void Insertar(Acudiente entidad);
+    boolean Insertar(Acudiente entidad);
 
-    void Eliminar(int Id);
+    boolean Eliminar(int Id);
 
-    void Actualizar(Acudiente entidad);
+    boolean Actualizar(Acudiente entidad);
 
     ArrayList<Acudiente> Obtener();
 
