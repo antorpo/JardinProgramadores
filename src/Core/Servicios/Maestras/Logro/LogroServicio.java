@@ -13,27 +13,27 @@ public class LogroServicio implements ILogroServicio {
 
     @Override
     public boolean Insertar(Logro entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return logroRepositorio.Insertar(entidad);
     }
 
     @Override
     public boolean Eliminar(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return logroRepositorio.Eliminar(Id);
     }
 
     @Override
     public boolean Actualizar(Logro entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return logroRepositorio.Actualizar(entidad);
     }
 
     @Override
     public ArrayList<Logro> Obtener() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return logroRepositorio.Obtener();
     }
 
     @Override
     public Logro ObtenerPorId(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return logroRepositorio.ObtenerPorId(Id);
     }
     
 }

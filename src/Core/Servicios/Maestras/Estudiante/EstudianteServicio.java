@@ -14,27 +14,27 @@ public class EstudianteServicio implements IEstudianteServicio{
 
     @Override
     public boolean Insertar(Estudiante entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return estudianteRepositorio.Insertar(entidad);
     }
 
     @Override
     public boolean Eliminar(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return estudianteRepositorio.Eliminar(Id);
     }
 
     @Override
     public boolean Actualizar(Estudiante entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return estudianteRepositorio.Actualizar(entidad);
     }
 
     @Override
     public ArrayList<Estudiante> Obtener() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return estudianteRepositorio.Obtener();
     }
 
     @Override
     public Estudiante ObtenerPorId(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return estudianteRepositorio.ObtenerPorId(Id);
     }
 
    

@@ -14,27 +14,27 @@ public class AcudienteServicio implements IAcudienteServicio {
 
     @Override
     public boolean Insertar(Acudiente entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return acudienteRepositorio.Insertar(entidad);
     }
 
     @Override
     public boolean Eliminar(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return acudienteRepositorio.Eliminar(Id);
     }
 
     @Override
     public boolean Actualizar(Acudiente entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return acudienteRepositorio.Actualizar(entidad);
     }
 
     @Override
     public ArrayList<Acudiente> Obtener() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return acudienteRepositorio.Obtener();
     }
 
     @Override
     public Acudiente ObtenerPorId(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return acudienteRepositorio.ObtenerPorId(Id);
     }
     
 }

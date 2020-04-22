@@ -14,27 +14,27 @@ public class GrupoServicio implements IGrupoServicio{
 
     @Override
     public boolean Insertar(Grupo entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return grupoRepositorio.Insertar(entidad);
     }
 
     @Override
     public boolean Eliminar(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return grupoRepositorio.Eliminar(Id);
     }
 
     @Override
     public boolean Actualizar(Grupo entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return grupoRepositorio.Actualizar(entidad);
     }
 
     @Override
     public ArrayList<Grupo> Obtener() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return grupoRepositorio.Obtener();
     }
 
     @Override
     public Grupo ObtenerPorId(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return grupoRepositorio.ObtenerPorId(Id);
     }
 
    

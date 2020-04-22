@@ -14,27 +14,27 @@ public class ProfesorServicio implements IProfesorServicio{
 
     @Override
     public boolean Insertar(Profesor entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return profesorRepositorio.Insertar(entidad);
     }
 
     @Override
     public boolean Eliminar(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return profesorRepositorio.Eliminar(Id);
     }
 
     @Override
     public boolean Actualizar(Profesor entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return profesorRepositorio.Actualizar(entidad);
     }
 
     @Override
     public ArrayList<Profesor> Obtener() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return profesorRepositorio.Obtener();
     }
 
     @Override
     public Profesor ObtenerPorId(int Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return profesorRepositorio.ObtenerPorId(Id);
     }
 
 }
