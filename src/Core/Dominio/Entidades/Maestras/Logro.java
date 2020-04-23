@@ -7,7 +7,6 @@ public class Logro {
     private int Id;
     private String Nombre;
     private String TipoLogro; // Cambiar por un enumerado de Logros
-    private Date FechaLogro;
     private Date FechaCreacion;
     private Date FechaModificacion;
 
@@ -33,14 +32,6 @@ public class Logro {
 
     public void setTipoLogro(String TipoLogro) {
         this.TipoLogro = TipoLogro;
-    }
-
-    public Date getFechaLogro() {
-        return FechaLogro;
-    }
-
-    public void setFechaLogro(Date FechaLogro) {
-        this.FechaLogro = FechaLogro;
     }
 
     public Date getFechaCreacion() {

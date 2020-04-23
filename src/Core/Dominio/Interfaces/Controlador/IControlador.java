@@ -1,5 +1,6 @@
 package Core.Dominio.Interfaces.Controlador;
+import java.awt.event.ActionListener;
 
-public interface IControlador {
+public interface IControlador extends ActionListener {
    void iniciarVista(); 
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 public class Grupo {
 
     private int Id;
+    private String Nombre;
     private Date FechaCreacion;
     private Date FechaModificacion;
 
@@ -32,4 +33,12 @@ public class Grupo {
         this.FechaModificacion = FechaModificacion;
     }
 
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+    
 }
