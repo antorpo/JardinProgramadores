@@ -1,11 +1,9 @@
 package UI.Vistas.Principal;
-
 import Core.Dominio.Interfaces.Controlador.IControlador;
-import Core.Dominio.Interfaces.Vistas.IVista;
 import UI.Controladores.Principal.MainController;
 import javax.swing.JFrame;
 
-public class PrincipalVista extends javax.swing.JFrame implements IVista {
+public class PrincipalVista extends javax.swing.JFrame{
     
     public PrincipalVista() {
         initComponents();
@@ -147,15 +145,16 @@ public class PrincipalVista extends javax.swing.JFrame implements IVista {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    @Override
+
     public void conectaControlador(IControlador c) {
         item_Profesores.addActionListener(c);
-        item_Profesores.setActionCommand("MATRICULAS");
-    }
-
-    @Override
-    public void mostrarVista() {
-        this.setVisible(true);
+        item_Profesores.setActionCommand("MAESTRA_PROFESORES");
+        
+        item_Grupos.addActionListener(c);
+        item_Grupos.setActionCommand("MAESTRA_GRUPOS");
+        
+        item_Logros.addActionListener(c);
+        item_Logros.setActionCommand("MAESTRA_LOGROS");
     }
 
     private void menu_LogrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu_LogrosMouseClicked

@@ -67,16 +67,20 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="panel_Info2" max="32767" attributes="0"/>
-                          <Component id="lbl_Titulo" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="panel_Info2" max="32767" attributes="0"/>
+                                  <Component id="lbl_Titulo" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="btn_Crear" min="-2" pref="120" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btn_Limpiar" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -90,7 +94,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btn_Crear" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="btn_Limpiar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_Limpiar" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="98" max="32767" attributes="0"/>
                   </Group>
@@ -133,10 +137,10 @@
                                           <Component id="lbl_TipoDoc2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="cb_TipoDoc2" max="32767" attributes="0"/>
+                                      <Component id="cb_TipoDoc" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txt_Documento2" min="-2" pref="266" max="-2" attributes="0"/>
+                                  <Component id="txt_Documento" min="-2" pref="266" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -146,7 +150,7 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="txt_Nombre2" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="txt_Nombre" alignment="1" max="32767" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="lbl_Telefono2" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
@@ -159,7 +163,7 @@
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lbl_Apellidos2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_Apellidos2" min="-2" pref="256" max="-2" attributes="0"/>
+                                      <Component id="txt_Apellidos" min="-2" pref="256" max="-2" attributes="0"/>
                                       <Component id="lbl_Doc2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
@@ -169,13 +173,13 @@
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="txt_Telefono2" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <Component id="txt_Telefono" min="-2" pref="118" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="txt_Espe" max="32767" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rb_Masculino2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rb_Masculino" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rb_Femenino2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rb_Femenino" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -192,8 +196,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_Nombre2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_Apellidos2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -202,8 +206,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cb_TipoDoc2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_Documento2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="cb_TipoDoc" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Documento" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -213,10 +217,10 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_Telefono2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Telefono" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_Espe" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_Masculino2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_Femenino2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_Masculino" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_Femenino" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="24" max="32767" attributes="0"/>
                       </Group>
@@ -224,12 +228,15 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txt_Nombre2">
+                <Component class="javax.swing.JTextField" name="txt_Nombre">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Nombre2">
                   <Properties>
@@ -239,15 +246,18 @@
                     <Property name="text" type="java.lang.String" value="Nombre:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Telefono2">
+                <Component class="javax.swing.JTextField" name="txt_Telefono">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Telefono2KeyTyped"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_TelefonoKeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Telefono2">
                   <Properties>
@@ -265,18 +275,21 @@
                     <Property name="text" type="java.lang.String" value="Documento:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Documento2">
+                <Component class="javax.swing.JTextField" name="txt_Documento">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_Documento2ActionPerformed"/>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Documento2KeyTyped"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_DocumentoActionPerformed"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_DocumentoKeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="cb_TipoDoc2">
+                <Component class="javax.swing.JComboBox" name="cb_TipoDoc">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
@@ -292,6 +305,7 @@
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_TipoDoc2">
@@ -310,12 +324,15 @@
                     <Property name="text" type="java.lang.String" value="Apellidos:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Apellidos2">
+                <Component class="javax.swing.JTextField" name="txt_Apellidos">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Espe">
                   <Properties>
@@ -334,6 +351,9 @@
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_EspeKeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Genero2">
                   <Properties>
@@ -343,13 +363,16 @@
                     <Property name="text" type="java.lang.String" value="Genero:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="rb_Masculino2">
+                <Component class="javax.swing.JRadioButton" name="rb_Masculino">
                   <Properties>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="M"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="rb_Femenino2">
+                <Component class="javax.swing.JRadioButton" name="rb_Femenino">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="F"/>
                   </Properties>
@@ -397,7 +420,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lbl_Titulo1" alignment="0" pref="542" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="panel_Editar" alignment="0" max="32767" attributes="0"/>
@@ -406,7 +429,7 @@
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="btn_Actualizar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btn_Limpiar1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_Limpiar2" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -421,12 +444,12 @@
                       <Component id="panel_Info3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="panel_Editar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace pref="13" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btn_Actualizar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_Limpiar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_Limpiar2" alignment="3" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -442,6 +465,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -454,9 +480,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="rb_Masculino3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rb_Masculino2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="rb_Femenino3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rb_Femenino2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="lbl_Genero3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -466,34 +492,29 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txt_Telefono3" min="-2" pref="118" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txt_Espe2" min="-2" pref="225" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="txt_Nombre2" pref="490" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lbl_TipoDoc3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cb_TipoDoc3" alignment="0" min="-2" pref="157" max="-2" attributes="0"/>
+                                          <Component id="cb_TipoDoc2" alignment="0" min="-2" pref="157" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lbl_Doc3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_Doc" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="txt_Doc2" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="txt_Telefono2" min="-2" pref="118" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txt_Espe2" min="-2" pref="225" max="-2" attributes="0"/>
+                                          </Group>
                                           <Component id="lbl_Nombre3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="lbl_Telefono3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_Nombre3" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="38" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lbl_Apellidos3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_Apellidos3" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                      </Group>
+                                      <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -516,23 +537,17 @@
                           </Group>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_Femenino3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_Masculino3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_Femenino2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_Masculino2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lbl_Nombre3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_Apellidos3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="lbl_Nombre3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_Nombre3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_Apellidos3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="txt_Nombre2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbl_TipoDoc3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -540,14 +555,14 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cb_TipoDoc3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_Doc" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="cb_TipoDoc2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_Doc2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="lbl_Telefono3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_Telefono3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_Telefono2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_Espe2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="21" max="32767" attributes="0"/>
@@ -565,7 +580,7 @@
                     <Property name="text" type="java.lang.String" value="."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="cb_TipoDoc3">
+                <Component class="javax.swing.JComboBox" name="cb_TipoDoc2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
@@ -581,6 +596,7 @@
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_TipoDoc3">
@@ -591,12 +607,15 @@
                     <Property name="text" type="java.lang.String" value="Tipo Identificacion:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Nombre3">
+                <Component class="javax.swing.JTextField" name="txt_Nombre2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Nombre3">
                   <Properties>
@@ -604,21 +623,6 @@
                       <Font name="Arial" size="11" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Nombre:"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txt_Apellidos3">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Arial" size="11" style="0"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lbl_Apellidos3">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Arial" size="11" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Apellidos:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Doc3">
@@ -629,16 +633,19 @@
                     <Property name="text" type="java.lang.String" value="Documento:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Doc">
+                <Component class="javax.swing.JTextField" name="txt_Doc2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_DocActionPerformed"/>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_DocKeyTyped"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_Doc2ActionPerformed"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Doc2KeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Espe2">
                   <Properties>
@@ -649,6 +656,9 @@
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Espe2KeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Espe2">
                   <Properties>
@@ -658,15 +668,18 @@
                     <Property name="text" type="java.lang.String" value="Especialidad"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Telefono3">
+                <Component class="javax.swing.JTextField" name="txt_Telefono2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Telefono3KeyTyped"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Telefono2KeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Telefono3">
                   <Properties>
@@ -676,7 +689,7 @@
                     <Property name="text" type="java.lang.String" value="Telefono:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="rb_Masculino3">
+                <Component class="javax.swing.JRadioButton" name="rb_Masculino2">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="groupGeneros1"/>
@@ -684,6 +697,9 @@
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="M"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Genero3">
                   <Properties>
@@ -693,13 +709,16 @@
                     <Property name="text" type="java.lang.String" value="Genero:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="rb_Femenino3">
+                <Component class="javax.swing.JRadioButton" name="rb_Femenino2">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="groupGeneros1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="F"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -728,6 +747,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ActualizarActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Container class="javax.swing.JPanel" name="panel_Info3">
               <Properties>
@@ -749,7 +771,7 @@
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="txt_Documento3" max="32767" attributes="0"/>
+                                  <Component id="txt_Documento2" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btn_Buscar" min="-2" pref="115" max="-2" attributes="0"/>
                               </Group>
@@ -766,7 +788,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="btn_Buscar" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="txt_Documento3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_Documento2" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
@@ -774,15 +796,18 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txt_Documento3">
+                <Component class="javax.swing.JTextField" name="txt_Documento2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Documento3KeyTyped"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Documento2KeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Documento">
                   <Properties>
@@ -808,7 +833,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btn_Limpiar1">
+            <Component class="javax.swing.JButton" name="btn_Limpiar2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="12" style="1"/>
@@ -819,8 +844,11 @@
                 <Property name="text" type="java.lang.String" value="LIMPIAR"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Limpiar1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Limpiar2ActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -843,7 +871,7 @@
                           <Component id="jScrollPane1" alignment="0" pref="522" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btn_Actualizar1" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="btn_Refrescar" min="-2" pref="111" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -857,7 +885,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" pref="212" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btn_Actualizar1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_Refrescar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -883,7 +911,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tbl_Docentes">
+                <Component class="javax.swing.JTable" name="tbl_Profesores">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
@@ -897,10 +925,13 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btn_Actualizar1">
+            <Component class="javax.swing.JButton" name="btn_Refrescar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="12" style="1"/>
@@ -911,7 +942,7 @@
                 <Property name="text" type="java.lang.String" value="REFRESH"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Actualizar1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_RefrescarActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

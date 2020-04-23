@@ -113,7 +113,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_Nombre2" max="32767" attributes="0"/>
+                              <Component id="txt_Nombre" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="lbl_Nombre2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="451" max="32767" attributes="0"/>
@@ -129,19 +129,22 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbl_Nombre2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txt_Nombre2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_Nombre" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txt_Nombre2">
+                <Component class="javax.swing.JTextField" name="txt_Nombre">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Nombre2">
                   <Properties>
@@ -220,6 +223,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -238,7 +244,7 @@
                                       <EmptySpace min="250" pref="250" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="txt_Nombre3" pref="490" max="32767" attributes="0"/>
+                                      <Component id="txt_Nombre2" pref="490" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -258,7 +264,7 @@
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="lbl_Nombre3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_Nombre3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Nombre2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="85" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -274,12 +280,15 @@
                     <Property name="text" type="java.lang.String" value="."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_Nombre3">
+                <Component class="javax.swing.JTextField" name="txt_Nombre2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_Nombre3">
                   <Properties>
@@ -316,6 +325,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ActualizarActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Container class="javax.swing.JPanel" name="panel_Info3">
               <Properties>
@@ -333,11 +345,11 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbl_Documento" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_Id" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="txt_Documento3" max="32767" attributes="0"/>
+                                  <Component id="txt_Id" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btn_Buscar" min="-2" pref="115" max="-2" attributes="0"/>
                               </Group>
@@ -350,11 +362,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lbl_Documento" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_Id" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="btn_Buscar" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="txt_Documento3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_Id" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
@@ -362,17 +374,20 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txt_Documento3">
+                <Component class="javax.swing.JTextField" name="txt_Id">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Documento3KeyTyped"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_IdKeyTyped"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lbl_Documento">
+                <Component class="javax.swing.JLabel" name="lbl_Id">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="1"/>
@@ -417,7 +432,7 @@
                           <Component id="jScrollPane1" alignment="0" pref="522" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btn_Actualizar1" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="btn_Refrescar" min="-2" pref="111" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -431,7 +446,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" pref="119" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btn_Actualizar1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_Refrescar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -457,7 +472,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tbl_Docentes">
+                <Component class="javax.swing.JTable" name="tbl_Grupos">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="11" style="0"/>
@@ -471,10 +486,13 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btn_Actualizar1">
+            <Component class="javax.swing.JButton" name="btn_Refrescar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="12" style="1"/>
@@ -485,7 +503,7 @@
                 <Property name="text" type="java.lang.String" value="REFRESH"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Actualizar1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_RefrescarActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

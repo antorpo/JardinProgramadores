@@ -10,12 +10,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class GrupoRepositorio implements IGrupoRepositorio{
+public class GrupoRepositorio implements IGrupoRepositorio {
+
     private IDbFactoria dbFactoria;
     private String tabla;
-    
-    
-    public GrupoRepositorio(IDbFactoria dbFactoria, String tabla){
+
+    public GrupoRepositorio(IDbFactoria dbFactoria, String tabla) {
         this.dbFactoria = dbFactoria;
         this.tabla = tabla;
     }
@@ -24,28 +24,29 @@ public class GrupoRepositorio implements IGrupoRepositorio{
     public boolean Insertar(Grupo entidad) {
         Connection con = null;
         boolean resultado = false;
-        
+
         try {
             con = dbFactoria.conectarBD();
-            String sql = "insert into " + tabla + " values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "insert into " + tabla + " values (?, ?, ?, ?)";
 
             PreparedStatement statement = con.prepareStatement(sql);
             statement.setInt(1, 0); // Id
-            statement.setDate(8, new java.sql.Date(entidad.getFechaCreacion().getTime()));
-            statement.setDate(9, null);
-            
+            statement.setDate(2, new java.sql.Date(entidad.getFechaCreacion().getTime()));
+            statement.setDate(3, null);
+            statement.setString(4, entidad.getNombre());
+
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
                 resultado = true;
                 System.out.println("[+] Insertado correctamente.");
             }
-            
+
             con.close();
         } catch (SQLException e) {
             System.out.println("[+] Error insertando en BD.");
             e.printStackTrace();
         }
-        
+
         return resultado;
     }
 
@@ -53,27 +54,26 @@ public class GrupoRepositorio implements IGrupoRepositorio{
     public boolean Eliminar(int Id) {
         Connection con = null;
         boolean resultado = false;
-        
+
         try {
             con = dbFactoria.conectarBD();
             String sql = "delete from " + tabla + " where id=? ";
 
             PreparedStatement statement = con.prepareStatement(sql);
             statement.setInt(1, Id); // Id
-            
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
                 System.out.println("[+] Eliminado correctamente.");
                 resultado = true;
             }
-            
+
             con.close();
         } catch (SQLException e) {
             System.out.println("[+] Error eliminando en BD.");
             e.printStackTrace();
         }
-        
+
         return resultado;
     }
 
@@ -81,34 +81,28 @@ public class GrupoRepositorio implements IGrupoRepositorio{
     public boolean Actualizar(Grupo entidad) {
         Connection con = null;
         boolean resultado = false;
-        
+
         try {
             con = dbFactoria.conectarBD();
-            String sql = "update " + tabla + " set nombre = ?, set apellido = ?, set documento = ?, set email =?,"
-                    + "set carrera=?, set semestre=?, set fechaedicion=? where id=? ";
+            String sql = "update " + tabla + " set fechamodificacion = ?, nombre = ? where id = ?";
 
             PreparedStatement statement = con.prepareStatement(sql);
-//            statement.setString(1, entidad.getNombre());
-//            statement.setString(2, entidad.getApellidos());
-//            statement.setString(3, entidad.getDocumento());
-//            statement.setString(4, entidad.getEmail());
-//            statement.setString(5, entidad.getCarrera());
-//            statement.setInt(6, entidad.getSemestre());
-//            statement.setDate(7, new java.sql.Date(entidad.getFechaEdicion().getTime()));
-//            statement.setInt(8, entidad.getId());
+            statement.setDate(1, new java.sql.Date(entidad.getFechaModificacion().getTime()));
+            statement.setString(2, entidad.getNombre());
+            statement.setInt(3, entidad.getId());
 
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
                 System.out.println("[+] Actualizado correctamente.");
                 resultado = true;
             }
-            
+
             con.close();
         } catch (SQLException e) {
             System.out.println("[+] Error actualizando en BD.");
             e.printStackTrace();
         }
-        
+
         return resultado;
     }
 
@@ -117,27 +111,21 @@ public class GrupoRepositorio implements IGrupoRepositorio{
         Connection con = null;
         ResultSet result = null;
         ArrayList<Grupo> lista = new ArrayList<Grupo>();
-        
+
         try {
             con = dbFactoria.conectarBD();
             String sql = "select * from " + tabla + " order by id";
-            
+
             Statement statement = con.createStatement();
             result = statement.executeQuery(sql);
-            
-            while (result.next()) {
-                  Grupo e = new Grupo();
-                  e.setId(result.getInt(1));
-//                  e.setNombre(result.getString(2));
-//                  e.setApellidos(result.getString(3));
-//                  e.setDocumento(result.getString(4));
-//                  e.setEmail(result.getString(5));
-//                  e.setCarrera(result.getString(6));
-//                  e.setSemestre(result.getInt(7));
-//                  e.setFechaCreacion(result.getDate(8));
-//                  e.setFechaEdicion(result.getDate(9));
 
-                  lista.add(e);
+            while (result.next()) {
+                Grupo e = new Grupo();
+                e.setId(result.getInt(1));
+                e.setFechaCreacion(result.getDate(2));
+                e.setFechaModificacion(result.getDate(3));
+                e.setNombre(result.getString(4));
+                lista.add(e);
             }
 
             result.close();
@@ -155,24 +143,19 @@ public class GrupoRepositorio implements IGrupoRepositorio{
         Connection con = null;
         ResultSet result = null;
         Grupo entidad = new Grupo();
-        
+
         try {
             con = dbFactoria.conectarBD();
-            String sql = "select from " + tabla + " where id = " + Id;
-            
+            String sql = "select * from " + tabla + " where id = " + Id;
+
             Statement statement = con.createStatement();
             result = statement.executeQuery(sql);
-            
+
             while (result.next()) {
-//                  estudiante.setId(result.getInt(1));
-//                  estudiante.setNombre(result.getString(2));
-//                  estudiante.setApellidos(result.getString(3));
-//                  estudiante.setDocumento(result.getString(4));
-//                  estudiante.setEmail(result.getString(5));
-//                  estudiante.setCarrera(result.getString(6));
-//                  estudiante.setSemestre(result.getInt(7));
-//                  estudiante.setFechaCreacion(result.getDate(8));
-//                  estudiante.setFechaEdicion(result.getDate(9));
+                entidad.setId(result.getInt(1));
+                entidad.setFechaCreacion(result.getDate(2));
+                entidad.setFechaModificacion(result.getDate(3));
+                entidad.setNombre(result.getString(4));
             }
 
             result.close();

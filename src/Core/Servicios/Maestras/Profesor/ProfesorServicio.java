@@ -37,4 +37,9 @@ public class ProfesorServicio implements IProfesorServicio{
         return profesorRepositorio.ObtenerPorId(Id);
     }
 
+    @Override
+    public Profesor ObtenerPorDocumento(String documento) {
+        return profesorRepositorio.ObtenerPorDocumento(documento);
+    }
+
 }

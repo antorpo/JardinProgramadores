@@ -6,6 +6,7 @@ public class Profesor extends EntidadBase {
 
     private String Telefono;
     private String Especialidad;
+    private String Genero;
 
     public String getTelefono() {
         return Telefono;
@@ -23,4 +24,11 @@ public class Profesor extends EntidadBase {
         this.Especialidad = Especialidad;
     }
 
+    public String getGenero() {
+        return Genero;
+    }
+
+    public void setGenero(String Genero) {
+        this.Genero = Genero;
+    }
 }
