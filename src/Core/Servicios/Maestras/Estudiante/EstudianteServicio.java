@@ -37,5 +37,10 @@ public class EstudianteServicio implements IEstudianteServicio{
         return estudianteRepositorio.ObtenerPorId(Id);
     }
 
+    @Override
+    public Estudiante ObtenerPorDocumento(String documento) {
+        return estudianteRepositorio.ObtenerPorDocumento(documento);
+    }
+
    
 }

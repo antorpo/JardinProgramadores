@@ -155,6 +155,9 @@ public class PrincipalVista extends javax.swing.JFrame{
         
         item_Logros.addActionListener(c);
         item_Logros.setActionCommand("MAESTRA_LOGROS");
+        
+        item_Matricula.addActionListener(c);
+        item_Matricula.setActionCommand("MATRICULAS");
     }
 
     private void menu_LogrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu_LogrosMouseClicked

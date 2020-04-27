@@ -13,4 +13,6 @@ public interface IEstudianteServicio {
     ArrayList<Estudiante> Obtener();
 
     Estudiante ObtenerPorId(int Id);
+    
+    Estudiante ObtenerPorDocumento(String documento);
 }

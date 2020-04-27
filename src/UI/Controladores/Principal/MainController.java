@@ -10,9 +10,11 @@ import Core.Dominio.Interfaces.Maestras.Profesor.IProfesorServicio;
 import UI.Controladores.Maestras.GrupoController;
 import UI.Controladores.Maestras.LogroController;
 import UI.Controladores.Maestras.ProfesorController;
+import UI.Controladores.Matricula.MatriculaController;
 import UI.Vistas.Maestras.GrupoVista;
 import UI.Vistas.Maestras.LogroVista;
 import UI.Vistas.Maestras.ProfesorVista;
+import UI.Vistas.Matriculas.MatriculaVista;
 import UI.Vistas.Principal.PrincipalVista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +38,10 @@ public class MainController implements ActionListener, IControlador {
     private LogroVista logroVista;
     private IControlador logroController;
 
+    private MatriculaVista matriculaVista;
+    private IControlador matriculaController;
+    
+    
     public MainController(PrincipalVista vista, IAcudienteServicio acudienteServicio, IEstudianteServicio estudianteServicio, IGrupoServicio grupoServicio, ILogroServicio logroServicio, IParienteServicio parienteServicio, IProfesorServicio profesorServicio) {
         this.vista = vista;
         this.acudienteServicio = acudienteServicio;
@@ -48,6 +54,7 @@ public class MainController implements ActionListener, IControlador {
         profesoresMaestra();
         gruposMaestra();
         logrosMaestra();
+        matriculas();
     }
 
     @Override
@@ -68,7 +75,12 @@ public class MainController implements ActionListener, IControlador {
             case "MAESTRA_LOGROS":
                 logroController.iniciarVista();
                 logroVista.conectaControlador(logroController);
-                break; 
+                break;
+            
+            case "MATRICULAS":
+                matriculaController.iniciarVista();
+                matriculaVista.conectaControlador(matriculaController);
+                break;            
         }
     }
 
@@ -85,6 +97,11 @@ public class MainController implements ActionListener, IControlador {
     public void logrosMaestra() {
         logroVista = new LogroVista();
         logroController = new LogroController(logroServicio, logroVista);
+    }
+    
+    public void matriculas() {
+        matriculaVista = new MatriculaVista();
+        matriculaController = new MatriculaController(estudianteServicio, parienteServicio,acudienteServicio, grupoServicio,logroServicio, matriculaVista);
     }
 
     @Override
