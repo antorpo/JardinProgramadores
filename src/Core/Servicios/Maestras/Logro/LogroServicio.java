@@ -35,5 +35,10 @@ public class LogroServicio implements ILogroServicio {
     public Logro ObtenerPorId(int Id) {
         return logroRepositorio.ObtenerPorId(Id);
     }
+
+    @Override
+    public int idUltimoRegistro() {
+        return logroRepositorio.idUltimoRegistro();
+    }
     
 }

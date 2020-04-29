@@ -54,6 +54,14 @@
                 <Property name="text" type="java.lang.String" value="REGISTRAR"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="item_Reporte">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Assets/Img/arrow1.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="REPORTE PDF"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="menu_Maestras">

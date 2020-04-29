@@ -4,12 +4,14 @@ import Core.Dominio.Entidades.Maestras.Estudiante;
 import Core.Dominio.Entidades.Maestras.Grupo;
 import Core.Dominio.Entidades.Maestras.Logro;
 import Core.Dominio.Entidades.Maestras.Pariente;
+import Core.Dominio.Entidades.Seguimiento.Seguimiento;
 import Core.Dominio.Interfaces.Controlador.IControlador;
 import Core.Dominio.Interfaces.Maestras.Acudiente.IAcudienteServicio;
 import Core.Dominio.Interfaces.Maestras.Estudiante.IEstudianteServicio;
 import Core.Dominio.Interfaces.Maestras.Grupo.IGrupoServicio;
 import Core.Dominio.Interfaces.Maestras.Logro.ILogroServicio;
 import Core.Dominio.Interfaces.Maestras.Pariente.IParienteServicio;
+import Core.Dominio.Interfaces.Seguimiento.ISeguimientoServicio;
 import UI.Vistas.Matriculas.MatriculaVista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,25 +20,31 @@ import java.util.Date;
 import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 
+ 
+/**
+ * Esta clase permite controlar todos los eventos de la matricula.
+ * @author Antonio
+ * @version 1.0
+ */
 public class MatriculaController implements ActionListener, IControlador {
 
     private IEstudianteServicio estudianteServicio;
     private IParienteServicio parienteServicio;
-    private IAcudienteServicio acudienteServicio;
     private IGrupoServicio grupoServicio;
     private ILogroServicio logoServicio;
+    private ISeguimientoServicio seguimientoServicio;
     private MatriculaVista vista;
 
     private ArrayList<Grupo> grupos;
     private ArrayList<Logro> logros;
     private ArrayList<Logro> logrosElegidos;
 
-    public MatriculaController(IEstudianteServicio estudianteServicio, IParienteServicio parienteServicio, IAcudienteServicio acudienteServicio, IGrupoServicio grupoServicio, ILogroServicio logoServicio, MatriculaVista vista) {
+    public MatriculaController(IEstudianteServicio estudianteServicio, IParienteServicio parienteServicio, IGrupoServicio grupoServicio, ILogroServicio logoServicio, ISeguimientoServicio seguimientoServicio, MatriculaVista vista) {
         this.estudianteServicio = estudianteServicio;
         this.parienteServicio = parienteServicio;
-        this.acudienteServicio = acudienteServicio;
         this.grupoServicio = grupoServicio;
         this.logoServicio = logoServicio;
+        this.seguimientoServicio = seguimientoServicio;
         this.vista = vista;
 
         grupos = new ArrayList<Grupo>();
@@ -46,6 +54,10 @@ public class MatriculaController implements ActionListener, IControlador {
         llenarComboTipo();
     }
 
+    /**
+     * Este metodo recibe las acciones de la vista con su determinado comando.
+     * @param ae Comando para identificar una accion de otra.
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
         String comando = ae.getActionCommand();
@@ -72,8 +84,11 @@ public class MatriculaController implements ActionListener, IControlador {
         }
     }
 
-    public void matricular() {
-        // Creamos el estudiante:
+    /**
+     * Creamos un estudiante con los datos de la matricula.
+     * @return Entidad estudiante
+     */
+    public Estudiante crearEstudiante() {
         Estudiante estudiante = new Estudiante();
         estudiante.setNombre(vista.txt_Nombre.getText() + " " + vista.txt_Apellidos.getText());
         estudiante.setTipoDocumento((String) vista.cb_TipoDoc.getSelectedItem());
@@ -85,7 +100,14 @@ public class MatriculaController implements ActionListener, IControlador {
         estudiante.setGenero(vista.rb_Masculino.isSelected() ? "Masculino" : "Femenino");
         estudiante.setProblemas(vista.txt_Observaciones.getText());
 
-        // Creamos el pariente:
+        return estudiante;
+    }
+
+    /**
+     * Creamos un pariente con los datos de la matricula.
+     * @return Entidad pariente
+     */
+    public Pariente crearPariente() {
         Pariente pariente = new Pariente();
         pariente.setNombre(vista.txt_Nombre1.getText() + " " + vista.txt_Apellidos1.getText());
         pariente.setTipoDocumento((String) vista.cb_TipoDoc1.getSelectedItem());
@@ -96,12 +118,55 @@ public class MatriculaController implements ActionListener, IControlador {
         pariente.setCelular(vista.txt_Celular1.getText());
         pariente.setDireccion(vista.txt_Direccion1.getText());
 
-        boolean estadoEstudiante = this.estudianteServicio.Insertar(estudiante);
-        boolean estadoPariente = this.parienteServicio.Insertar(pariente);
-        
-        JOptionPane.showMessageDialog(null, "EXITOSO!", "Informacion:", JOptionPane.INFORMATION_MESSAGE);
+        return pariente;
     }
 
+    /**
+     * Creamos la matricula, con el estudiante, pariente y logros.
+     */
+    public void matricular() {
+        if (logrosElegidos.size() < 6) {
+            JOptionPane.showMessageDialog(null, "Tiempo minimo de formacion 12 meses!", "Advertencia:", JOptionPane.WARNING_MESSAGE);
+        } else {
+
+            boolean estadoEstudiante = this.estudianteServicio.Insertar(crearEstudiante());
+            boolean estadoPariente = this.parienteServicio.Insertar(crearPariente());
+
+            if (estadoEstudiante && estadoPariente) {
+                Seguimiento seguimiento;
+                boolean estadoFinal = true;
+                int idEstudiante = this.estudianteServicio.idUltimoRegistro();
+
+                for (Logro logro : logrosElegidos) {
+                    seguimiento = new Seguimiento();
+                    seguimiento.setIdLogro(logro.getId());
+                    seguimiento.setIdEstudiante(idEstudiante);
+                    seguimiento.setNombreLogro(logro.getNombre());
+
+                    boolean estado = this.seguimientoServicio.Insertar(seguimiento);
+
+                    if (!estado) {
+                        estadoFinal = false;
+                        break;
+                    }
+                }
+
+                if (estadoFinal) {
+                    JOptionPane.showMessageDialog(null, "Matricula exitosa!", "Informacion:", JOptionPane.INFORMATION_MESSAGE);
+                    limpiarMatricula();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Matricula fallida!", "Error:", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Hubo un error en la matricula!", "Error:", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
+    /**
+     * Adicionamos logros a la lista de matriculados por el estudiante.
+     */
     public void adicionarLogro() {
         String seleccionado = vista.list_LogrosDisponibles.getSelectedValue();
 
@@ -124,6 +189,10 @@ public class MatriculaController implements ActionListener, IControlador {
         }
     }
 
+    /**
+     * Guardamos en la persistencia los diferentes logros matriculados.
+     * @param entidad Logro a matricular
+     */
     public void matricularLogro(Logro entidad) {
         vista.lista2.clear();
         vista.lbl_Tiempo.setText("0");
@@ -139,6 +208,9 @@ public class MatriculaController implements ActionListener, IControlador {
         });
     }
 
+    /**
+     * Removemos logros a la lista de matriculados por el estudiante.
+     */
     public void removerLogro() {
         String seleccionado = vista.list_LogrosMatriculados.getSelectedValue();
 
@@ -154,6 +226,11 @@ public class MatriculaController implements ActionListener, IControlador {
         }
     }
 
+    /**
+     * Calculamos si un logro ya existe en los que estan matriculados.
+     * @param nombre Nombre del logro
+     * @return Encontrado o no en los logros matriculados.
+     */
     public boolean logroRepetido(String nombre) {
         boolean encontrado = false;
 
@@ -166,7 +243,10 @@ public class MatriculaController implements ActionListener, IControlador {
 
         return encontrado;
     }
-
+    
+    /**
+     * Cargar los grupos disponibles al elemento combo.
+     */
     public void cargarGrupos() {
         vista.cb_Grupo.removeAllItems();
         grupos = this.grupoServicio.Obtener();
@@ -174,12 +254,15 @@ public class MatriculaController implements ActionListener, IControlador {
         if (grupos.isEmpty()) {
             vista.cb_Grupo.addItem("No hay grupos");
         } else {
-            for (Grupo grupo : grupos) {
+            grupos.forEach((grupo) -> {
                 vista.cb_Grupo.addItem(grupo.getNombre());
-            }
+            });
         }
     }
 
+    /**
+     * Cargar los logros disponibles al elemento combo.
+     */
     public void cargarLogros() {
         vista.lista.clear();
         logros = this.logoServicio.Obtener();
@@ -189,7 +272,10 @@ public class MatriculaController implements ActionListener, IControlador {
         });
     }
 
-    public void cancelarMatricula() {
+    /**
+     * Limpiar las variables y campos para un nuevo uso.
+     */
+    public void limpiarMatricula() {
         logros = new ArrayList<Logro>();
         logrosElegidos = new ArrayList<Logro>();
         grupos = new ArrayList<Grupo>();
@@ -210,6 +296,9 @@ public class MatriculaController implements ActionListener, IControlador {
         vista.txt_Celular1.setText("");
     }
 
+    /**
+     * Cargar los tipos de documentos disponibles al elemento combo.
+     */
     public void llenarComboTipo() {
         vista.cb_TipoDoc.removeAllItems();
         vista.cb_TipoDoc.addItem("Registro Civil");
@@ -223,10 +312,13 @@ public class MatriculaController implements ActionListener, IControlador {
         vista.cb_Calidad1.addItem("Familiar");
         vista.cb_Calidad1.addItem("Acudiente");
     }
-
+    
+    /**
+     * Dar visibilidad a la vista y iniciar sus primera funcionalidades.
+     */
     @Override
     public void iniciarVista() {
-        cancelarMatricula();
+        limpiarMatricula();
         cargarLogros();
         cargarGrupos();
         vista.setVisible(true);

@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
+/**
+ * Esta clase permite controlar todos los eventos de la maestra de logros.
+ * @author Antonio
+ * @version 1.0
+ */
 public class LogroController implements ActionListener, IControlador {
     private ILogroServicio logroServicio;
     private LogroVista vista;
@@ -23,6 +28,10 @@ public class LogroController implements ActionListener, IControlador {
         componentesEstado(false);
     }
 
+    /**
+     * Este metodo recibe las acciones de la vista con su determinado comando.
+     * @param ae Comando para identificar una accion de otra.
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
         String comando = ae.getActionCommand();
@@ -86,6 +95,10 @@ public class LogroController implements ActionListener, IControlador {
         }
     }
 
+    /**
+     * Poder activar o inactivar los componentes de avance.
+     * @param estado Activar o inactivar
+     */
     public void componentesEstado(boolean estado) {
         vista.txt_Nombre2.setEnabled(estado);
         vista.txt_Tipo2.setEnabled(estado);
@@ -93,12 +106,18 @@ public class LogroController implements ActionListener, IControlador {
         vista.panel_Editar.setEnabled(estado);
     }
     
+    /**
+     * Limpiar las variables y campos para un nuevo uso.
+     */
     public void limpiarActualizacion() {
         vista.txt_Id.setText("");
         vista.txt_Nombre2.setText("");
         vista.txt_Tipo2.setText("");
     }
     
+    /**
+     * Leemos los logros desde la persistencia.
+     */
     public void leerLogros() {
         if (listaVacia()) {
             ArrayList<Logro> logros = this.logroServicio.Obtener();
@@ -116,10 +135,17 @@ public class LogroController implements ActionListener, IControlador {
         }
     }
     
+    /**
+     * Comprobamos si la lista de la vista se encuentra vacia.
+     * @return Vacia o no
+     */
     public boolean listaVacia(){
         return vista.tabla.getRowCount() == 0;
     }
     
+    /**
+     * Dar visibilidad a la vista y iniciar sus primeras funcionalidades.
+     */
     @Override
     public void iniciarVista() {
         vista.setVisible(true);

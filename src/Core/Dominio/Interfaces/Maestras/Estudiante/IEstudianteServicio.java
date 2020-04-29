@@ -15,4 +15,6 @@ public interface IEstudianteServicio {
     Estudiante ObtenerPorId(int Id);
     
     Estudiante ObtenerPorDocumento(String documento);
+    
+    int idUltimoRegistro();
 }

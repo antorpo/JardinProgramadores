@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
+/**
+ * Esta clase permite controlar todos los eventos de la maestra de grupos.
+ * @author Antonio
+ * @version 1.0
+ */
 public class GrupoController implements ActionListener, IControlador {
 
     private IGrupoServicio grupoServicio;
@@ -24,6 +29,10 @@ public class GrupoController implements ActionListener, IControlador {
         componentesEstado(false);
     }
 
+    /**
+     * Este metodo recibe las acciones de la vista con su determinado comando.
+     * @param ae Comando para identificar una accion de otra.
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
         String comando = ae.getActionCommand();
@@ -83,12 +92,19 @@ public class GrupoController implements ActionListener, IControlador {
         }
     }
 
+    /**
+     * Poder activar o inactivar los componentes de avance.
+     * @param estado Activar o inactivar
+     */
     public void componentesEstado(boolean estado) {
         vista.txt_Nombre2.setEnabled(estado);
         vista.btn_Actualizar.setEnabled(estado);
         vista.panel_Editar.setEnabled(estado);
     }
     
+    /**
+     * Leer los grupos disponibles desde la persistencia.
+     */
     public void leerGrupos() {
         if (listaVacia()) {
             ArrayList<Grupo> grupos = this.grupoServicio.Obtener();
@@ -106,15 +122,25 @@ public class GrupoController implements ActionListener, IControlador {
         }
     }
     
+    /**
+     * Limpiar las variables y campos para un nuevo uso.
+     */
     public void limpiarActualizacion() {
         vista.txt_Nombre2.setText("");
         vista.txt_Id.setText("");
     }
     
+    /**
+     * Comprobamos si la lista de la vista se encuentra vacia.
+     * @return Vacia o no
+     */
     public boolean listaVacia(){
         return vista.tabla.getRowCount() == 0;
     }
     
+    /**
+     * Dar visibilidad a la vista y iniciar sus primeras funcionalidades.
+     */
     @Override
     public void iniciarVista() {
         vista.setVisible(true);

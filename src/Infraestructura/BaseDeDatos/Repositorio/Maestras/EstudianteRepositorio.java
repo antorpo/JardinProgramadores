@@ -238,4 +238,30 @@ public class EstudianteRepositorio implements IEstudianteRepositorio {
         return encontrado ? entidad : null;
     }
 
+    @Override
+    public int idUltimoRegistro(){
+        Connection con = null;
+        ResultSet result = null;
+        int idUltimo = 0;
+        
+        try {
+            con = dbFactoria.conectarBD();
+            String sql = "select max(id) as id from " + tabla;
+
+            Statement statement = con.createStatement();
+            result = statement.executeQuery(sql);
+
+            if (result.next()) {
+                idUltimo = result.getInt(1);
+            }
+
+            result.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("[+] Error obteniendo registros.");
+            e.printStackTrace();
+        }
+        
+        return idUltimo;
+    }
 }

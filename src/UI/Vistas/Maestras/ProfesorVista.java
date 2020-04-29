@@ -272,7 +272,8 @@ public class ProfesorVista extends javax.swing.JFrame{
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btn_Crear, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_Limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btn_Limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12))))
         );
         pnl_CreacionLayout.setVerticalGroup(
             pnl_CreacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -666,6 +667,10 @@ public class ProfesorVista extends javax.swing.JFrame{
     
     }//GEN-LAST:event_btn_Limpiar2ActionPerformed
 
+    /**
+    * Este metodo nos ayuda a conectar las acciones con su controlador (listener).
+    * @param c Controlador
+    */
     public void conectaControlador(IControlador c) {
         btn_Limpiar.addActionListener(c);
         btn_Limpiar.setActionCommand("LIMPIAR_CREACION");

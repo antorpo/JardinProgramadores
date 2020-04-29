@@ -4,4 +4,5 @@ import Core.Dominio.Interfaces.RepositorioGenerico.IRepositorio;
 
 public interface IEstudianteRepositorio extends IRepositorio<Estudiante> {
     Estudiante ObtenerPorDocumento(String documento);
+    int idUltimoRegistro();
 }

@@ -13,4 +13,6 @@ public interface ILogroServicio {
     ArrayList<Logro> Obtener();
 
     Logro ObtenerPorId(int Id);
+    
+    int idUltimoRegistro();
 }

@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
+/**
+ * Esta clase permite controlar todos los eventos de la maestra de profesores.
+ * @author Antonio
+ * @version 1.0
+ */
 public class ProfesorController implements ActionListener, IControlador {
 
     private IProfesorServicio profesorServicio;
@@ -24,6 +29,10 @@ public class ProfesorController implements ActionListener, IControlador {
         componentesEstado(false);
     }
 
+    /**
+     * Este metodo recibe las acciones de la vista con su determinado comando.
+     * @param ae Comando para identificar una accion de otra.
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
         String comando = ae.getActionCommand();
@@ -113,6 +122,9 @@ public class ProfesorController implements ActionListener, IControlador {
         }
     }
 
+     /**
+     * Cargar los logros disponibles al elemento combo.
+     */
     public void llenarComboTipos() {
         vista.cb_TipoDoc.removeAllItems();
         vista.cb_TipoDoc.addItem("Cedula de Ciudadania");
@@ -124,6 +136,9 @@ public class ProfesorController implements ActionListener, IControlador {
         vista.cb_TipoDoc2.addItem("Pasaporte");
     }
 
+    /**
+     * Limpiar las variables y campos para un nuevo uso, apartado creacion.
+     */
     public void limpiarCreacion() {
         vista.txt_Nombre.setText("");
         vista.txt_Apellidos.setText("");
@@ -132,6 +147,9 @@ public class ProfesorController implements ActionListener, IControlador {
         vista.txt_Espe.setText("");
     }
 
+    /**
+     * Limpiar las variables y campos para un nuevo uso, apartado actualizacion.
+     */
     public void limpiarActualizacion() {
         vista.txt_Documento2.setText("");
         vista.txt_Nombre2.setText("");
@@ -139,7 +157,11 @@ public class ProfesorController implements ActionListener, IControlador {
         vista.txt_Telefono2.setText("");
         vista.txt_Espe2.setText("");
     }
-
+    
+    /**
+     * Poder activar o inactivar los componentes de avance.
+     * @param estado Activar o inactivar
+     */
     public void componentesEstado(boolean estado) {
         vista.txt_Nombre2.setEnabled(estado);
         vista.txt_Telefono2.setEnabled(estado);
@@ -153,6 +175,9 @@ public class ProfesorController implements ActionListener, IControlador {
         vista.panel_Editar.setEnabled(estado);
     }
     
+    /**
+     * Leemos los profesores guardados en la persistencia.
+     */
     public void leerProfesores() {
         if (listaVacia()) {
             ArrayList<Profesor> profesores = this.profesorServicio.Obtener();
@@ -171,10 +196,17 @@ public class ProfesorController implements ActionListener, IControlador {
         }
     }
     
+    /**
+     * Comprobamos si la lista de la vista se encuentra vacia.
+     * @return Vacia o no
+     */
     public boolean listaVacia(){
         return vista.tabla.getRowCount() == 0;
     }
 
+    /**
+     * Dar visibilidad a la vista y iniciar sus primeras funcionalidades.
+     */
     @Override
     public void iniciarVista() {
         vista.setVisible(true);

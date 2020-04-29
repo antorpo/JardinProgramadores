@@ -690,7 +690,10 @@ public class MatriculaVista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    /**
+    * Este metodo nos ayuda a conectar las acciones con su controlador (listener).
+    * @param c Controlador
+    */
     public void conectaControlador(IControlador c) {
        btn_Adicionar.addActionListener(c);
        btn_Adicionar.setActionCommand("ADICIONAR");

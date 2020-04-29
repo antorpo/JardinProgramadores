@@ -5,6 +5,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Esta clase permite asignar los parametros de conexion para la base de datos.
+ * @author Antonio
+ * @version 1.0
+ */
 public class DbFactoria implements IDbFactoria {
 
     private String Host;
@@ -21,6 +26,10 @@ public class DbFactoria implements IDbFactoria {
         Password = password;
     }
 
+    /**
+     * Nos conectamos a la base de datos usando el respectivo driver de MySQL
+     * @return Conexion
+     */
     @Override
     public Connection conectarBD() {
         Connection conexion = null;

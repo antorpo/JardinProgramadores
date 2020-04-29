@@ -360,7 +360,10 @@ public class GrupoVista extends javax.swing.JFrame{
 
     }//GEN-LAST:event_btn_RefrescarActionPerformed
 
-
+    /**
+    * Este metodo nos ayuda a conectar las acciones con su controlador (listener).
+    * @param c Controlador
+    */
     public void conectaControlador(IControlador c) {
         btn_Crear.addActionListener(c);
         btn_Crear.setActionCommand("CREAR");

@@ -42,5 +42,10 @@ public class EstudianteServicio implements IEstudianteServicio{
         return estudianteRepositorio.ObtenerPorDocumento(documento);
     }
 
+    @Override
+    public int idUltimoRegistro() {
+        return estudianteRepositorio.idUltimoRegistro();
+    }
+
    
 }

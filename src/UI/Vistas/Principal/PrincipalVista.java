@@ -25,6 +25,7 @@ public class PrincipalVista extends javax.swing.JFrame{
         item_Matricula = new javax.swing.JMenuItem();
         menu_Logros = new javax.swing.JMenu();
         item_RegistrarLogro = new javax.swing.JMenuItem();
+        item_Reporte = new javax.swing.JMenuItem();
         menu_Maestras = new javax.swing.JMenu();
         item_Profesores = new javax.swing.JMenuItem();
         item_Grupos = new javax.swing.JMenuItem();
@@ -70,6 +71,10 @@ public class PrincipalVista extends javax.swing.JFrame{
         item_RegistrarLogro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Img/arrow1.png"))); // NOI18N
         item_RegistrarLogro.setText("REGISTRAR");
         menu_Logros.add(item_RegistrarLogro);
+
+        item_Reporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Img/arrow1.png"))); // NOI18N
+        item_Reporte.setText("REPORTE PDF");
+        menu_Logros.add(item_Reporte);
 
         menuBar.add(menu_Logros);
 
@@ -145,7 +150,10 @@ public class PrincipalVista extends javax.swing.JFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
+    /**
+    * Este metodo nos ayuda a conectar las acciones con su controlador (listener).
+    * @param c Controlador
+    */
     public void conectaControlador(IControlador c) {
         item_Profesores.addActionListener(c);
         item_Profesores.setActionCommand("MAESTRA_PROFESORES");
@@ -158,6 +166,12 @@ public class PrincipalVista extends javax.swing.JFrame{
         
         item_Matricula.addActionListener(c);
         item_Matricula.setActionCommand("MATRICULAS");
+        
+        item_RegistrarLogro.addActionListener(c);
+        item_RegistrarLogro.setActionCommand("REGISTRAR");
+        
+        item_Reporte.addActionListener(c);
+        item_Reporte.setActionCommand("REPORTE");        
     }
 
     private void menu_LogrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu_LogrosMouseClicked
@@ -202,6 +216,7 @@ public class PrincipalVista extends javax.swing.JFrame{
     private javax.swing.JMenuItem item_Matricula;
     private javax.swing.JMenuItem item_Profesores;
     private javax.swing.JMenuItem item_RegistrarLogro;
+    private javax.swing.JMenuItem item_Reporte;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar menuBar;
