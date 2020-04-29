@@ -1,0 +1,1 @@
+Para correr la base de datos se utilizo XAMPP y Phpmyadmin con MySQL.
