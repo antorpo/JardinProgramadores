@@ -29,6 +29,10 @@ import javax.swing.JOptionPane;
  * la conexion a la base da datos y instancia los diferentes servicio y repositorios.
  * @author Antonio
  * @version 1.0
+ * 
+ * TODO: En los repositorios en cada uno de los metodos CRUD no crear un objeto
+ * Connection, simplemente pasar por parametro a cada repositorio la creacion
+ * creada con anterioridad.
  */
 public class Main {
     // Este sera el orquestador para no poner la capa de aplicaciones.
